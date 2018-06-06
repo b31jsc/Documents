@@ -1,31 +1,31 @@
-### GitHub Pages + Hexo实现个人博客
-#### 0. 准备工作
+## GitHub Pages + Hexo实现个人博客
+### 0. 准备工作
 * 操作系统: Ubuntu 18.04
 
-#### 1. 简介
-##### 1.1 什么是 Hexo ？
+### 1. 简介
+#### 1.1 什么是 Hexo ？
 * **Hexo** 是一个快速、简洁且高效的博客框架。**Hexo** 使用  Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。  
 官方网站：[https://hexo.io/zh-cn/](https://hexo.io/zh-cn/)
 
-##### 1.2 什么是 GitHub Pages？
+#### 1.2 什么是 GitHub Pages？
 * **GitHub** 是一个基于 git 的代码托管平台。从开源到商业，可以托管代码、查看代码、管理项目、与其他开发人员一起构建软件。  
 官方网站：[https://github.com/](https://github.com/)   
 * **GitHub Pages** 本身设计用于托管 **GitHub** 仓库中的个人、组织或项目的页面。我们可以利用它来存放我们的个人博客。  
 
 一句话，利用 **Hexo** 生成静态网页，托管到 **GitHub** 上，通过 **GitHub Pages** 查看。
 
-#### 2. 安装 Hexo
+### 2. 安装 Hexo
 官方安装教程：[https://hexo.io/zh-cn/docs/](https://hexo.io/zh-cn/docs/)  
 安装 **Hexo** 之前需要先安装 **Node.js** 和 **Git**;  
 如果电脑中已经安装上述程序，直接查看 **2.3 安装Hexo**。
 
 #### 2.1 安装 Node.js
-* 输入如下命令，安装 nvm ：  
+* 输入如下命令，安装 **nvm** ：  
    ```
    $ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
    ```  
 * 如果使用的 shell 不是 **sh**，要修改最后一个单词。  
-可通过如下命令查看当前使用的shell，如下是 **zsh**。
+可通过如下命令查看当前使用的 shell，如下是 **zsh**。
 	```
 	$ chsh
 	密码： 
@@ -35,15 +35,15 @@
 	 
 	$ 
 	```
-* 在 zsh 下安装 nvm，输入如下命令:
+* 在 **zsh** 下安装 **nvm**，输入如下命令:
 	```
 	$ curl https://raw.github.com/creationix/nvm/master/install.sh | zsh
 	```
-* 大部分电脑默认的 shell 是 bash，使用如下命令:
+* 大部分电脑默认的 shell 是 **bash**，使用如下命令:
 	```
 	$ curl https://raw.github.com/creationix/nvm/master/install.sh | bash
 	```
-* nvm 安装完成后，重启终端，输入命令```nvm install stable```，安装 **Node.js**；
+* **nvm** 安装完成后，重启终端，输入命令 ```nvm install stable```，安装 **Node.js**；
 	```
 	$ nvm install stable
 	Downloading and installing node v10.3.0...
@@ -56,10 +56,10 @@
 	$
 	```
 #### 2.2 安装 Git
-* 输入命令```sudo apt-get install git```，安装 **git**
+* 输入命令 ```sudo apt-get install git```，安装 **git**
 
 #### 2.3 安装 Hexo
-* 输入命令```npm install -g hexo-cli```，安装 **Hexo**
+* 输入命令 ```npm install -g hexo-cli```，安装 **Hexo**
 	```
 	$ npm install -g hexo-cli
 	/home/jiang/.nvm/versions/node/v10.3.0/bin/hexo -> /home/jiang/.nvm/versions/node/v10.3.0/lib/node_modules/hexo-cli/bin/hexo
@@ -70,7 +70,7 @@
 	added 103 packages from 343 contributors in 14.452s
 	$
 	```
-* 重启终端，输入命令```hexo version```，能查看到版本号说明安装成功
+* 重启终端，输入命令 ```hexo version```，能查看到版本号说明安装成功
 	```
 	$ hexo version
 	hexo-cli: 1.1.0
@@ -121,135 +121,167 @@ $
 ```
 -->
 
-#### 3. Hexo 本地建站
+### 3. Hexo 本地建站
 官方建站教程：[https://hexo.io/zh-cn/docs/setup.html](https://hexo.io/zh-cn/docs/setup.html)
-* 使用命令```hexo init <folder>```，创建一个新文件夹，“\<folder\>”是文件夹的名称；  
-输入命令```cd <folder>```，打开文件夹；  
-输入命令```npm install```;  
-	```
-	$ hexo init hexo_test
-	INFO  Cloning hexo-starter to ~/hexo_test
-	正克隆到 '/home/jiang/hexo_test'...
-	remote: Counting objects: 65, done.
-	remote: Total 65 (delta 0), reused 0 (delta 0), pack-reused 65
-	展开对象中: 100% (65/65), 完成.
-	子模组 'themes/landscape'（https://github.com/hexojs/hexo-theme-landscape.git）未对路径 'themes/landscape' 注册
-	正克隆到 '/home/jiang/hexo_test/themes/landscape'...
-	remote: Counting objects: 819, done.        
-	remote: Total 819 (delta 0), reused 0 (delta 0), pack-reused 819        
-	接收对象中: 100% (819/819), 2.54 MiB | 87.00 KiB/s, 完成.
-	处理 delta 中: 100% (432/432), 完成.
-	子模组路径 'themes/landscape'：检出 '73a23c51f8487cfcd7c6deec96ccc7543960d350'
-	INFO  Install dependencies
-	npm WARN deprecated titlecase@1.1.2: no longer maintained
+#### 3.1 初始化
+使用命令 ```hexo init <folder>```，创建一个新文件夹，"\<folder\>"是文件夹的名称；  
+输入命令 ```cd <folder>```，打开文件夹；  
+输入命令 ```npm install```;
+```
+$ hexo init hexo_test
+INFO  Cloning hexo-starter to ~/hexo_test
+正克隆到 '/home/jiang/hexo_test'...
+remote: Counting objects: 65, done.
+remote: Total 65 (delta 0), reused 0 (delta 0), ack-reused 65
+展开对象中: 100% (65/65), 完成.
+子模组 'themes/landscape'（https://github.com/hexojs/hexo-theme-landscape.git）未对路径 'themes/landscape' 注册
+正克隆到 '/home/jiang/hexo_test/themes/landscape'...
+remote: Counting objects: 819, done.        
+remote: Total 819 (delta 0), reused 0 (delta 0), pack-reused 819        
+接收对象中: 100% (819/819), 2.54 MiB | 87.00 KiB/s, 完成.
+处理 delta 中: 100% (432/432), 完成.
+子模组路径 'themes/landscape'：检出 '73a23c51f8487cfcd7c6deec96ccc7543960d350'
+INFO  Install dependencies
+npm WARN deprecated titlecase@1.1.2: no longer maintained
 
-	> nunjucks@3.1.3 postinstall /home/jiang/hexo_test/node_modules/nunjucks
-	> node postinstall-build.js src
+> nunjucks@3.1.3 postinstall /home/jiang/hexo_test/node_modules/nunjucks
+> node postinstall-build.js src
 
-	npm notice created a lockfile as package-lock.json. You should commit this file.
-	npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
-	npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
 
-	added 400 packages from 487 contributors and audited 2028 packages in 18.795s
-	found 0 vulnerabilities
+added 400 packages from 487 contributors and audited 2028 packages in 18.795s
+found 0 vulnerabilities
 
-	INFO  Start blogging with Hexo!
+INFO  Start blogging with Hexo!
 
-	$ cd hexo_test
-	$ npm install
-	npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
-	npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+$ cd hexo_test
+$ npm install
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
 
-	audited 2028 packages in 3.697s
-	found 0 vulnerabilities
+audited 2028 packages in 3.697s
+found 0 vulnerabilities
 
-	$
-	```
-* 完成新建后，新文件夹目录结构如下：
-	```
-	$ tree -L 1
-	.
-	├── _config.yml
-	├── node_modules
-	├── package.json
-	├── package-lock.json
-	├── scaffolds
-	├── source
-	└── themes
-	```
-* 输入命令```hexo g```或```hexo generate```，生成静态文件；  
-	```
-	$ hexo g
-	INFO  Start processing
-	INFO  Files loaded in 244 ms
-	INFO  Generated: index.html
-	INFO  Generated: archives/index.html
-	INFO  Generated: fancybox/blank.gif
-	INFO  Generated: fancybox/jquery.fancybox.css
-	INFO  Generated: fancybox/fancybox_loading.gif
-	INFO  Generated: fancybox/fancybox_loading@2x.gif
-	INFO  Generated: fancybox/fancybox_overlay.png
-	INFO  Generated: fancybox/fancybox_sprite.png
-	INFO  Generated: fancybox/fancybox_sprite@2x.png
-	INFO  Generated: archives/2018/05/index.html
-	INFO  Generated: archives/2018/index.html
-	INFO  Generated: css/fonts/FontAwesome.otf
-	INFO  Generated: js/script.js
-	INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.css
-	INFO  Generated: fancybox/jquery.fancybox.pack.js
-	INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.js
-	INFO  Generated: fancybox/helpers/jquery.fancybox-media.js
-	INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.css
-	INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.js
-	INFO  Generated: css/style.css
-	INFO  Generated: fancybox/helpers/fancybox_buttons.png
-	INFO  Generated: css/fonts/fontawesome-webfont.woff
-	INFO  Generated: css/fonts/fontawesome-webfont.eot
-	INFO  Generated: css/fonts/fontawesome-webfont.ttf
-	INFO  Generated: css/images/banner.jpg
-	INFO  Generated: css/fonts/fontawesome-webfont.svg
-	INFO  Generated: 2018/05/31/hello-world/index.html
-	INFO  Generated: fancybox/jquery.fancybox.js
-	INFO  28 files generated in 568 ms
+$
+```
+#### 3.2 目录结构  
+完成新建后，新文件夹目录结构如下：
+```
+$ tree -L 1
+.
+├── _config.yml
+├── node_modules
+├── package.json
+├── package-lock.json
+├── scaffolds
+├── source
+└── themes
+```
+#### 3.3 生成静态页面  
+输入命令 ```hexo g``` 或 ```hexo generate``` 生成静态文件；  
+```
+$ hexo g
+INFO  Start processing
+INFO  Files loaded in 244 ms
+INFO  Generated: index.html
+INFO  Generated: archives/index.html
+INFO  Generated: fancybox/blank.gif
+INFO  Generated: fancybox/jquery.fancybox.css
+INFO  Generated: fancybox/fancybox_loading.gif
+INFO  Generated: fancybox/fancybox_loading@2x.gif
+INFO  Generated: fancybox/fancybox_overlay.png
+INFO  Generated: fancybox/fancybox_sprite.png
+INFO  Generated: fancybox/fancybox_sprite@2x.png
+INFO  Generated: archives/2018/05/index.html
+INFO  Generated: archives/2018/index.html
+INFO  Generated: css/fonts/FontAwesome.otf
+INFO  Generated: js/script.js
+INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.css
+INFO  Generated: fancybox/jquery.fancybox.pack.js
+INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.js
+INFO  Generated: fancybox/helpers/jquery.fancybox-media.js
+INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.css
+INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.js
+INFO  Generated: css/style.css
+INFO  Generated: fancybox/helpers/fancybox_buttons.png
+INFO  Generated: css/fonts/fontawesome-webfont.woff
+INFO  Generated: css/fonts/fontawesome-webfont.eot
+INFO  Generated: css/fonts/fontawesome-webfont.ttf
+INFO  Generated: css/images/banner.jpg
+INFO  Generated: css/fonts/fontawesome-webfont.svg
+INFO  Generated: 2018/05/31/hello-world/index.html
+INFO  Generated: fancybox/jquery.fancybox.js
+INFO  28 files generated in 568 ms
 
-	$ 
-  ```
-
-* 输入命令```hexo s```或```hexo server```，启动服务器；  
+$ 
+```
+#### 3.4 启动本地服务器  
+输入命令```hexo s```或```hexo server```，启动本地服务器；  
 默认访问网址为：[http://localhost:4000/](http://localhost:4000/)
-	```
-	$ hexo s
-	INFO  Start processing
-	INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
-	```
-* 打开浏览器，输入默认网址 [http://localhost:4000/](http://localhost:4000/)，等待一小会，进入 Hexo 界面，如下图：
-![localhost](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A21-localhost.png)
+```
+$ hexo s
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+```
+#### 3.5 访问本地服务器  
+打开浏览器，输入默认网址  [http://localhost:4000/](http://localhost:4000/)，等待一小会，进入 **Hexo** 界面，如下图：
+![localhost](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201-localhost.png)
 
-#### 4. 发布到 GitHub
-* GitHub 注册与仓库建立请自行查找
+至此，我们有了一个本地的博客。下一步开启 **GitHub Pages**。
 
-* 编辑_config.yml文件，搜索 "deploy" 字段，添加GitHub仓库地址  
-GitHub仓库地址在此处查看
-![ssh](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A22-ssh.png)
-  按如下格式添加：
-  ```
-  # Deployment
-  ## Docs: https://hexo.io/docs/deployment.html
-  deploy:
-    type:
-  ```
-  修改为：
-  ```
-  # Deployment
-  ## Docs: https://hexo.io/docs/deployment.html
-  deploy:
-    type: git
-    repo: git@github.com:b31jsc/b31jsc.github.io.git
-  ```
-  注意_config.yml文件中的空格！
+### 4. 开启 GitHub Pages
+#### 4.1 注册 **GitHub**  
+参考如下教程，完成GitHub的注册和仓库的建立  
+[GitHub 的注册与使用](https://github.com/b31jsc/Documents/blob/master/GitHub%E7%9A%84%E6%B3%A8%E5%86%8C%E4%B8%8E%E4%BD%BF%E7%94%A8.md#github-%E7%9A%84%E6%B3%A8%E5%86%8C%E4%B8%8E%E4%BD%BF%E7%94%A8)
+#### 4.2 修改仓库类型为 **GitHub Pages**  
+* 在仓库页面点击设置 "**Setting**"
+![settings](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A202-settings.png)
+* "**Setting**"页面如下
+![settingsin](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A203-settingsin.png)
+* 下拉 "**Setting**" 页面到 "**GitHub Pages**" 处，选择 "**source**" 为 "**master branch**"
+![master](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A204-master.png)
+* 点击保存 "**save**"
+![save](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A205-save.png)
+* 再次回到 "**GitHub Pages**" ，可以看到提示 "**Your site is ready to be published at https://b31jsc.github.io/test/**"
+![published](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A206-published.png)
+* 打开浏览器，输入网址  [https://b31jsc.github.io/test/](https://b31jsc.github.io/test/)，可以看到 test 已经建立
+![webtest](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A207-webtest.png)
+#### 4.3 优化 **GitHub Pages** 域名  
+* 再次打开 "**Setting**"，修改 "**repository name**"为 "b31jsc.github.io"，点击"**Rename**"。其中 "b31jsc"是账户名称，".github.io"是后缀，一定要按该格式填写
+![rename](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A208-rename.png)
+* 回到 **GitHub Pages** 处，可以看到提示变为 "**Your site is ready to be published at https://b31jsc.github.io/.**"
+![url](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A209-url.png)
 
-* 发布到 GitHub  
-1. 输入命令```npm install hexo-deployer-git --save```，安装插件 **hexo-deployer-git**  
+* 打开浏览器，输入网址  [https://b31jsc.github.io/](https://b31jsc.github.io/)，可以通过新域名访问 **GitHub Pages**
+![urlopen](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A210-urlopen.png)
+
+此时我们已经有了一个 **GitHub Pages** 网页，接下来将 **Hexo** 生成的网页发布到 **GitHub Pages**
+
+### 5. 发布到 GitHub
+#### 5.1 编辑 **_config.yml** 文件
+打开 **3.1 初始化** 建立的 **Hexo** 目录，打开 **_config.yml** 文件，搜索 "**deploy**" 字段，添加 **GitHub** 仓库地址。  
+**GitHub** 仓库地址在此处查看：
+![ssh](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A211-ssh.png)
+按如下格式添加：
+```
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type:
+```
+修改为：
+```
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: git@github.com:b31jsc/b31jsc.github.io.git
+```
+注意 **_config.yml** 文件中的空格！
+#### 5.2 发布到 GitHub  
+* 输入命令 ```npm install hexo-deployer-git --save```，安装插件 **hexo-deployer-git**  
     ```
     $ npm install hexo-deployer-git --save
     npm WARN deprecated swig@1.4.2: This package is no longer maintained
@@ -261,9 +293,8 @@ GitHub仓库地址在此处查看
     found 1 low severity vulnerability
       run `npm audit fix` to fix them, or `npm audit` for details
     $ 
-    ➜   
     ```
-2. 报错，按提示输入命令```npm audit fix```，再次输入命令```npm install hexo-deployer-git --save```
+* 报错，按提示输入命令 ```npm audit fix```，再次输入命令 ```npm install hexo-deployer-git --save```
     ```
     $ npm audit fix
     npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
@@ -287,7 +318,7 @@ GitHub仓库地址在此处查看
       run `npm audit fix` to fix them, or `npm audit` for details
     $
     ```
-3. 依然报错，经过仔细查看，文件_config.yml编辑有误，“repo:”前方应有两个空格，后方应有一个空格。
+* 依然报错，经过仔细查看，文件 **_config.yml** 编辑有误，"**repo:**"前方应有两个空格，后方应有一个空格。
     ```
       repo:git@github.com:b31jsc/b31jsc.github.io.git
     ```
@@ -295,7 +326,7 @@ GitHub仓库地址在此处查看
     ```
       repo: git@github.com:b31jsc/b31jsc.github.io.git
     ```
-4. 再次输入命令```npm install hexo-deployer-git， --save```，完成安装
+* 再次输入命令 ```npm install hexo-deployer-git， --save```，完成安装
     ```
     $ npm install hexo-deployer-git --save
     npm WARN deprecated swig@1.4.2: This package is no longer maintained
@@ -306,7 +337,7 @@ GitHub仓库地址在此处查看
     updated 1 package in 16.862s
     $
     ```
-5. 输入命令```hexo deploy```，将网页部署到 GitHub
+* 输入命令```hexo deploy```，将网页部署到 **GitHub**，等待命令执行完成
     ```
     $ hexo deploy
     INFO  Deploying: git
@@ -355,9 +386,8 @@ GitHub仓库地址在此处查看
     INFO  Deploy done: git
     $
     ```
-* 查看 GitHub Pages，打开网页 [https://b31jsc.github.io/](https://b31jsc.github.io/)
-![github.io](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A23-github.io.png)  
+* 打开浏览器，输入网址  [https://b31jsc.github.io/](https://b31jsc.github.io/)，可以看到 **Hexo** 页面已经上传到 **Github Pages** 了
+![github.io](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A212-github.io.png)  
 
-可以看到本地页面已经上传到Github Pages了
 
 
