@@ -8,7 +8,7 @@
 官方网站：[https://hexo.io/zh-cn/](https://hexo.io/zh-cn/)
 
 #### 1.2 什么是 GitHub Pages？
-* **GitHub** 是一个基于 git 的代码托管平台。从开源到商业，可以托管代码、查看代码、管理项目、与其他开发人员一起构建软件。  
+* **GitHub** 是一个基于 **git** 的代码托管平台。从开源到商业，可以托管代码、查看代码、管理项目、与其他开发人员一起构建软件。  
 官方网站：[https://github.com/](https://github.com/)   
 * **GitHub Pages** 本身设计用于托管 **GitHub** 仓库中的个人、组织或项目的页面。我们可以利用它来存放我们的个人博客。  
 
@@ -24,8 +24,8 @@
    ```
    $ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
    ```  
-* 如果使用的 shell 不是 **sh**，要修改最后一个单词。  
-可通过如下命令查看当前使用的 shell，如下是 **zsh**。
+* 如果使用的 **shell** 不是 **sh**，要修改最后一个单词。  
+可通过如下命令查看当前使用的 **shell**，如下是 **zsh**。
 	```
 	$ chsh
 	密码： 
@@ -123,8 +123,9 @@ $
 
 ### 3. Hexo 本地建站
 官方建站教程：[https://hexo.io/zh-cn/docs/setup.html](https://hexo.io/zh-cn/docs/setup.html)
+
 #### 3.1 初始化
-使用命令 ```hexo init <folder>```，创建一个新文件夹，"\<folder\>"是文件夹的名称；  
+输入命令 ```hexo init <folder>```，创建一个新文件夹，"\<folder\>"是文件夹的名称；  
 输入命令 ```cd <folder>```，打开文件夹；  
 输入命令 ```npm install```;
 ```
@@ -156,6 +157,7 @@ found 0 vulnerabilities
 
 INFO  Start blogging with Hexo!
 
+$
 $ cd hexo_test
 $ npm install
 npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
@@ -218,7 +220,7 @@ INFO  28 files generated in 568 ms
 $ 
 ```
 #### 3.4 启动本地服务器  
-输入命令```hexo s```或```hexo server```，启动本地服务器；  
+输入命令 ```hexo s``` 或 ```hexo server```，启动本地服务器；  
 默认访问网址为：[http://localhost:4000/](http://localhost:4000/)
 ```
 $ hexo s
@@ -226,7 +228,7 @@ INFO  Start processing
 INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 ```
 #### 3.5 访问本地服务器  
-打开浏览器，输入默认网址  [http://localhost:4000/](http://localhost:4000/)，等待一小会，进入 **Hexo** 界面，如下图：
+打开浏览器，输入网址  [http://localhost:4000/](http://localhost:4000/)，等待一小会儿，进入 **Hexo** 界面，如下图：
 ![localhost](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201-localhost.png)
 
 至此，我们有了一个本地的博客。下一步开启 **GitHub Pages**。
@@ -235,10 +237,11 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 #### 4.1 注册 **GitHub**  
 参考如下教程，完成GitHub的注册和仓库的建立  
 [GitHub 的注册与使用](https://github.com/b31jsc/Documents/blob/master/GitHub%E7%9A%84%E6%B3%A8%E5%86%8C%E4%B8%8E%E4%BD%BF%E7%94%A8.md#github-%E7%9A%84%E6%B3%A8%E5%86%8C%E4%B8%8E%E4%BD%BF%E7%94%A8)
+
 #### 4.2 修改仓库类型为 **GitHub Pages**  
 * 在仓库页面点击设置 "**Setting**"
 ![settings](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A202-settings.png)
-* "**Setting**"页面如下
+* "**Setting**"页面如下：
 ![settingsin](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A203-settingsin.png)
 * 下拉 "**Setting**" 页面到 "**GitHub Pages**" 处，选择 "**source**" 为 "**master branch**"
 ![master](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A204-master.png)
@@ -248,6 +251,7 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 ![published](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A206-published.png)
 * 打开浏览器，输入网址  [https://b31jsc.github.io/test/](https://b31jsc.github.io/test/)，可以看到 test 已经建立
 ![webtest](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A207-webtest.png)
+
 #### 4.3 优化 **GitHub Pages** 域名  
 * 再次打开 "**Setting**"，修改 "**repository name**"为 "b31jsc.github.io"，点击"**Rename**"。其中 "b31jsc"是账户名称，".github.io"是后缀，一定要按该格式填写
 ![rename](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A208-rename.png)
@@ -257,21 +261,21 @@ INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 * 打开浏览器，输入网址  [https://b31jsc.github.io/](https://b31jsc.github.io/)，可以通过新域名访问 **GitHub Pages**
 ![urlopen](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A210-urlopen.png)
 
-此时我们已经有了一个 **GitHub Pages** 网页，接下来将 **Hexo** 生成的网页发布到 **GitHub Pages**
+至此我们已经有了一个 **GitHub Pages** 网页，接下来将 **Hexo** 生成的网页发布到 **GitHub Pages**。
 
 ### 5. 发布到 GitHub
 #### 5.1 编辑 **_config.yml** 文件
 打开 **3.1 初始化** 建立的 **Hexo** 目录，打开 **_config.yml** 文件，搜索 "**deploy**" 字段，添加 **GitHub** 仓库地址。  
 **GitHub** 仓库地址在此处查看：
 ![ssh](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A211-ssh.png)
-按如下格式添加：
+修改前：
 ```
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
 ```
-修改为：
+修改后：
 ```
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -280,6 +284,7 @@ deploy:
   repo: git@github.com:b31jsc/b31jsc.github.io.git
 ```
 注意 **_config.yml** 文件中的空格！
+
 #### 5.2 发布到 GitHub  
 * 输入命令 ```npm install hexo-deployer-git --save```，安装插件 **hexo-deployer-git**  
     ```
@@ -303,8 +308,8 @@ deploy:
     up to date in 2.571s
     fixed 0 of 1 vulnerability in 2303 scanned packages
       1 vulnerability required manual review and could not be updated
-    jiang@jiang-Lenovo-IdeaPad-Y400: /home/jiang/hexo_test  
 
+    $
     $ npm install hexo-deployer-git --save
     [..................] | fetchMetadata: sill removeObsoleteDep removing wordwrap@
     [..................] | fetchMetadata: sill removeObsoleteDep removing wordwrap@
@@ -318,11 +323,12 @@ deploy:
       run `npm audit fix` to fix them, or `npm audit` for details
     $
     ```
-* 依然报错，经过仔细查看，文件 **_config.yml** 编辑有误，"**repo:**"前方应有两个空格，后方应有一个空格。
+* 依然报错，经过仔细查看，文件 **_config.yml** 编辑有误，"**repo:**"前方应有两个空格，后方应有一个空格。  
+修改前：
     ```
       repo:git@github.com:b31jsc/b31jsc.github.io.git
     ```
-    修改为：
+    修改后：
     ```
       repo: git@github.com:b31jsc/b31jsc.github.io.git
     ```
@@ -387,7 +393,110 @@ deploy:
     $
     ```
 * 打开浏览器，输入网址  [https://b31jsc.github.io/](https://b31jsc.github.io/)，可以看到 **Hexo** 页面已经上传到 **Github Pages** 了
-![github.io](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A212-github.io.png)  
+![github.io](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A212-github.io.png)
 
+上文我们将模板页面上传到 **Github Pages**，接下来介绍如何写一篇新博客。
 
+### 6. 写新博客
+* 回到章节 **3. Hexo 本地建站** 初始化的文件夹，输入命令 ```hexo n "My New Post"``` 或者 ```hexo new "My New Post"```
+  ```
+  $ hexo new "My New Post" 
+  INFO  Created: ~/hexo_test/source/_posts/My-New-Post.md
+  $
+  ```
+* 该命令在目录 ```source/_posts/``` 下新建了文件 "My-New-Post.md"，文件内容如下：
+  ```
+  $ cat source/_posts/My-New-Post.md
+  ---
+  title: My New Post
+  date: 2018-06-07 15:11:08
+  tags:
+  ---
+  ```
+* 输入命令 ```hexo s``` 或者 ```hexo server```，启动本地服务器
+* 打开浏览器，输入网址 [http://localhost:4000/](http://localhost:4000/)，可以看到新文章 "My New Post"
+![newpost](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A213-newpost.png)
+* 输入命令 ```hexo g``` 或者 ```hexo generate```，重新生成本地页面
+* 输入命令 ```hexo d``` 或者 ```hexo deploy```，部署到 **GitHub**
+  ```
+  $ hexo g
+  INFO  Start processing
+  INFO  Files loaded in 144 ms
+  INFO  Generated: index.html
+  INFO  Generated: archives/2018/index.html
+  INFO  Generated: archives/index.html
+  INFO  Generated: archives/2018/05/index.html
+  INFO  Generated: 2018/05/31/hello-world/index.html
+  INFO  Generated: archives/2018/06/index.html
+  INFO  Generated: 2018/06/07/My-New-Post/index.html
+  INFO  7 files generated in 199 ms
+  $
+  $ hexo deploy
+  INFO  Deploying: git
+  INFO  Clearing .deploy_git folder...
+  INFO  Copying files from public folder...
+  INFO  Copying files from extend dirs...
+  [master 0bad987] Site updated: 2018-06-07 15:30:10
+   7 files changed, 475 insertions(+), 7 deletions(-)
+   create mode 100644 2018/06/07/My-New-Post/index.html
+   create mode 100644 archives/2018/06/index.html
+  To github.com:b31jsc/b31jsc.github.io.git
+     331bfa6..0bad987  HEAD -> master
+  分支 'master' 设置为跟踪来自 'git@github.com:b31jsc/b31jsc.github.io.git' 的远程分支 'master'。
+  INFO  Deploy done: git
+  $ 
+  ```
+* 打开浏览器，输入网址 [https://b31jsc.github.io/](https://b31jsc.github.io/)，可以看到新文章 "My New Post"。如果打开发现没有变化，稍等片刻，给 **GitHub** 一个反应的时间，重新打开网页就会看到了
+![newpostgithub](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A214-newpostgithub.png)
+
+目录 ```source/_posts/``` 下的文件对应每一篇博客，根据自己需要进行修改，修改完成后重新 ```hexo generate``` 和 ```hexo deploy```
+
+### 6. 修改主题
+博客页面不想用默认风格，可以换一个风格  
+官方主题页面：[https://hexo.io/themes/](https://hexo.io/themes/)  
+在该页面找一个喜欢的主题，此处以NexT为例
+
+* 回到 hexo 目录，输入命令```git clone https://github.com/theme-next/hexo-theme-next.git themes/next```，下载主题
+  ```
+  $ git clone https://github.com/theme-next/hexo-theme-next.git themes/next
+  正克隆到 'themes/next'...
+  remote: Counting objects: 3543, done.
+  remote: Total 3543 (delta 0), reused 0 (delta 0), pack-reused 3542
+  接收对象中: 100% (3543/3543), 1.24 MiB | 618.00 KiB/s, 完成.
+  处理 delta 中: 100% (2273/2273), 完成.
+  $
+  ```
+
+* 修改_config文件，查找 theme 字段，修改主题为next  
+修改前：
+  ```
+  # Extensions
+  ## Plugins: https://hexo.io/plugins/
+  ## Themes: https://hexo.io/themes/
+  theme: landscape
+  ```
+  修改后：
+  ```
+  # Extensions
+  ## Plugins: https://hexo.io/plugins/
+  ## Themes: https://hexo.io/themes/
+  theme: next
+  ```
+* 输入命令 ```hexo s``` 或者 ```hexo server```，启动本地服务器
+* 打开浏览器，输入网址 [http://localhost:4000/](http://localhost:4000/)，可以看到界面风格已经变化
+![themenext](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A215-themenext.png)
+* 生成静态页面，上传GitHub，省略具体步骤
+
+以上，我们已经可以建立自己的博客了。
+
+#### 注意：
+* **Hexo** 只上传了 **GitHub** 最终生成的网页，**GitHub** 上并没有保留源码，有源码丢失的风险，可以将源码也保留一份在 **GitHub** 上  
+在 **GitHub** 上新建一个仓库，在 Hexo 目录依次输入如下命令：  
+```hexo clean``` 清除多余文件  
+```git init```   
+```git add *``` 添加所有文件  
+```git add .gitignore``` 补充添加.gitignore文件  
+```git commit -m "first commit"```   
+```git remote add origin XXXXX```  XXXXX是注册仓库的地址  
+```git push -u origin master```
 
