@@ -233,4 +233,16 @@ MBR转GPT的方法有很多，在网上百度“MBR转GPT”即可。
 ![最终分区方案](https://raw.githubusercontent.com/b31jsc/img/master/WIN10%E5%92%8CUbuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E/%E6%9C%80%E7%BB%88%E5%88%86%E5%8C%BA%E6%96%B9%E6%A1%88.png)  
 
 
+###注意：
+* **问题现象**：使用一段时间后发现两个系统时间不一致。Ubuntu的系统时间是当前时间，WIN10的系统时间比当前时间早8个小时。  
+**问题原因**：BIOS会记录一个时间，Windows系统把BIOS时间作为本地时间，即操作系统中显示的时间跟BIOS中显示的时间是一样的。Ubuntu系统把BIOS时间当作UTC时间，操作系统显示的时间是UTC时间经过换算得来的。比如说北京时间是GMT+8，则系统中显示时间是UTC时间+8。  
+当Ubuntu启动时，通过网络获取当前时间，然后修改BIOS时间比当前时间早8
+个小时，WIN10启动后会认为BIOS中的时间就是当前时间，所以WIN10显示的时间比实际时间早8个小时。  
+**解决方法**：修改Ubuntu系统把BIOS时间作为本地时间。输入命令 ```timedatectl set-local-rtc 1```，解决上述问题。  
+
+
+
+
+
+
 
