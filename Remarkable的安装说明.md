@@ -16,7 +16,7 @@ Remarkable is a powerful markdown editor available for Linux. It is fully featur
 下载地址：[http://remarkableapp.github.io/linux/download.html](http://remarkableapp.github.io/linux/download.html)  
 ![下载](https://raw.githubusercontent.com/b31jsc/img/master/Remarkable%E7%9A%84%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E/Remarkable%E7%9A%84%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E2-%E4%B8%8B%E8%BD%BD.png)
 
-* 输入安装命令```sudo dpkg -i remarkable_1.87_all.deb```
+* 输入安装命令 `sudo dpkg -i remarkable_1.87_all.deb`
   ```
   $ sudo dpkg -i remarkable_1.87_all.deb  
   [sudo] jiang 的密码： 
@@ -47,7 +47,7 @@ Remarkable is a powerful markdown editor available for Linux. It is fully featur
   $ 
   ```
 * 安装发生错误，存在依赖关系问题  
-输入命令```sudo apt-get upgrade -f```
+输入命令 `sudo apt-get upgrade -f`
   ```
   $ sudo apt-get upgrade -f
   正在读取软件包列表... 完成
@@ -126,7 +126,7 @@ Remarkable is a powerful markdown editor available for Linux. It is fully featur
   $ 
   $ 
   ```
-* 完成依赖关系修复，再次输入```sudo dpkg -i remarkable_1.87_all.deb```，安装成功。
+* 完成依赖关系修复，再次输入 `sudo dpkg -i remarkable_1.87_all.deb`，安装成功。
   ```
   $ sudo dpkg -i remarkable_1.87_all.deb  
   (正在读取数据库 ... 系统当前共安装有 194353 个文件和目录。)
@@ -143,7 +143,7 @@ Remarkable is a powerful markdown editor available for Linux. It is fully featur
   正在处理用于 hicolor-icon-theme (0.17-2) 的触发器 ...
   $
   ```
-* 输入命令```remarkable```启动
+* 输入命令 `remarkable`启动
   ```
   $ remarkable
   *Spellchecking not enabled.

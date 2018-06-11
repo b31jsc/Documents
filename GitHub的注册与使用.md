@@ -43,12 +43,12 @@
 ![quicksetup](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%E7%9A%84%E6%B3%A8%E5%86%8C%E4%B8%8E%E4%BD%BF%E7%94%A8/GitHub%E7%9A%84%E6%B3%A8%E5%86%8C%E4%B8%8E%E4%BD%BF%E7%94%A810-quicksetup.png)
 
 * 在终端命令行新建一个目录，在新目录下依次输入如下命令  
-输入 ```echo "# test" >> README.md``` 创建文件README.md  
-输入 ```git init``` 初始化仓库  
-输入 ```git add README.md``` 添加文件README.md  
-输入 ```git commit -m "first commit"``` 本地保存  
-输入 ```git remote add origin https://github.com/b31jsc/test.git``` 关联GitHub仓库
-输入 ```git push -u origin master``` 上传，此处会提示输入用户名和密码，输入即可
+输入 `echo "# test" >> README.md` 创建文件README.md  
+输入 `git init` 初始化仓库  
+输入 `git add README.md` 添加文件README.md  
+输入 `git commit -m "first commit"` 本地保存  
+输入 `git remote add origin https://github.com/b31jsc/test.git` 关联GitHub仓库
+输入 `git push -u origin master` 上传，此处会提示输入用户名和密码，输入即可
   ```
   $ mkdir test
   $ cd test/

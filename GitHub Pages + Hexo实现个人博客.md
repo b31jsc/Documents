@@ -21,9 +21,9 @@
 
 #### 2.1 安装 Node.js
 * 输入如下命令，安装 **nvm** ：  
-   ```
-   $ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
-   ```  
+  ```
+  $ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+  ```
 * 如果使用的 **shell** 不是 **sh**，要修改最后一个单词。  
 可通过如下命令查看当前使用的 **shell**，如下是 **zsh**。
 	```
@@ -43,7 +43,7 @@
 	```
 	$ curl https://raw.github.com/creationix/nvm/master/install.sh | bash
 	```
-* **nvm** 安装完成后，重启终端，输入命令 ```nvm install stable```，安装 **Node.js**；
+* **nvm** 安装完成后，重启终端，输入命令 `nvm install stable`，安装 **Node.js**；
 	```
 	$ nvm install stable
 	Downloading and installing node v10.3.0...
@@ -56,10 +56,10 @@
 	$
 	```
 #### 2.2 安装 Git
-* 输入命令 ```sudo apt-get install git```，安装 **git**
+* 输入命令 `sudo apt-get install git`，安装 **git**
 
 #### 2.3 安装 Hexo
-* 输入命令 ```npm install -g hexo-cli```，安装 **Hexo**
+* 输入命令 `npm install -g hexo-cli`，安装 **Hexo**
 	```
 	$ npm install -g hexo-cli
 	/home/jiang/.nvm/versions/node/v10.3.0/bin/hexo -> /home/jiang/.nvm/versions/node/v10.3.0/lib/node_modules/hexo-cli/bin/hexo
@@ -70,7 +70,7 @@
 	added 103 packages from 343 contributors in 14.452s
 	$
 	```
-* 重启终端，输入命令 ```hexo version```，能查看到版本号说明安装成功
+* 重启终端，输入命令 `hexo version`，能查看到版本号说明安装成功
 	```
 	$ hexo version
 	hexo-cli: 1.1.0
@@ -125,9 +125,9 @@ $
 官方建站教程：[https://hexo.io/zh-cn/docs/setup.html](https://hexo.io/zh-cn/docs/setup.html)
 
 #### 3.1 初始化
-输入命令 ```hexo init <folder>```，创建一个新文件夹，"\<folder\>"是文件夹的名称；  
-输入命令 ```cd <folder>```，打开文件夹；  
-输入命令 ```npm install```;
+输入命令 `hexo init <folder>`，创建一个新文件夹，"\<folder\>"是文件夹的名称；  
+输入命令 `cd <folder>`，打开文件夹；  
+输入命令 `npm install`;
 ```
 $ hexo init hexo_test
 INFO  Cloning hexo-starter to ~/hexo_test
@@ -182,7 +182,7 @@ $ tree -L 1
 └── themes
 ```
 #### 3.3 生成静态页面  
-输入命令 ```hexo g``` 或 ```hexo generate``` 生成静态文件；  
+输入命令 `hexo g` 或 `hexo generate` 生成静态文件；  
 ```
 $ hexo g
 INFO  Start processing
@@ -220,7 +220,7 @@ INFO  28 files generated in 568 ms
 $ 
 ```
 #### 3.4 启动本地服务器  
-输入命令 ```hexo s``` 或 ```hexo server```，启动本地服务器；  
+输入命令 `hexo s` 或 `hexo server`，启动本地服务器；  
 默认访问网址为：[http://localhost:4000/](http://localhost:4000/)
 ```
 $ hexo s
@@ -286,7 +286,7 @@ deploy:
 注意 **_config.yml** 文件中的空格！
 
 #### 5.2 发布到 GitHub  
-* 输入命令 ```npm install hexo-deployer-git --save```，安装插件 **hexo-deployer-git**  
+* 输入命令 `npm install hexo-deployer-git --save`，安装插件 **hexo-deployer-git**  
     ```
     $ npm install hexo-deployer-git --save
     npm WARN deprecated swig@1.4.2: This package is no longer maintained
@@ -299,7 +299,7 @@ deploy:
       run `npm audit fix` to fix them, or `npm audit` for details
     $ 
     ```
-* 报错，按提示输入命令 ```npm audit fix```，再次输入命令 ```npm install hexo-deployer-git --save```
+* 报错，按提示输入命令 `npm audit fix`，再次输入命令 `npm install hexo-deployer-git --save`
     ```
     $ npm audit fix
     npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
@@ -332,7 +332,7 @@ deploy:
     ```
       repo: git@github.com:b31jsc/b31jsc.github.io.git
     ```
-* 再次输入命令 ```npm install hexo-deployer-git， --save```，完成安装
+* 再次输入命令 `npm install hexo-deployer-git， --save`，完成安装
     ```
     $ npm install hexo-deployer-git --save
     npm WARN deprecated swig@1.4.2: This package is no longer maintained
@@ -343,7 +343,7 @@ deploy:
     updated 1 package in 16.862s
     $
     ```
-* 输入命令```hexo deploy```，将网页部署到 **GitHub**，等待命令执行完成
+* 输入命令`hexo deploy`，将网页部署到 **GitHub**，等待命令执行完成
     ```
     $ hexo deploy
     INFO  Deploying: git
@@ -398,13 +398,13 @@ deploy:
 上文我们将模板页面上传到 **Github Pages**，接下来介绍如何写一篇新博客。
 
 ### 6. 写新博客
-* 回到章节 **3. Hexo 本地建站** 初始化的文件夹，输入命令 ```hexo n "My New Post"``` 或者 ```hexo new "My New Post"```
+* 回到章节 **3. Hexo 本地建站** 初始化的文件夹，输入命令 `hexo n "My New Post"` 或者 `hexo new "My New Post"`
   ```
   $ hexo new "My New Post" 
   INFO  Created: ~/hexo_test/source/_posts/My-New-Post.md
   $
   ```
-* 该命令在目录 ```source/_posts/``` 下新建了文件 "My-New-Post.md"，文件内容如下：
+* 该命令在目录 `source/_posts/` 下新建了文件 "My-New-Post.md"，文件内容如下：
   ```
   $ cat source/_posts/My-New-Post.md
   ---
@@ -413,11 +413,11 @@ deploy:
   tags:
   ---
   ```
-* 输入命令 ```hexo s``` 或者 ```hexo server```，启动本地服务器
+* 输入命令 `hexo s` 或者 `hexo server`，启动本地服务器
 * 打开浏览器，输入网址 [http://localhost:4000/](http://localhost:4000/)，可以看到新文章 "My New Post"
 ![newpost](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A213-newpost.png)
-* 输入命令 ```hexo g``` 或者 ```hexo generate```，重新生成本地页面
-* 输入命令 ```hexo d``` 或者 ```hexo deploy```，部署到 **GitHub**
+* 输入命令 `hexo g` 或者 `hexo generate`，重新生成本地页面
+* 输入命令 `hexo d` 或者 `hexo deploy`，部署到 **GitHub**
   ```
   $ hexo g
   INFO  Start processing
@@ -449,14 +449,14 @@ deploy:
 * 打开浏览器，输入网址 [https://b31jsc.github.io/](https://b31jsc.github.io/)，可以看到新文章 "My New Post"。如果打开发现没有变化，稍等片刻，给 **GitHub** 一个反应的时间，重新打开网页就会看到了
 ![newpostgithub](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A214-newpostgithub.png)
 
-目录 ```source/_posts/``` 下的文件对应每一篇博客，根据自己需要进行修改，修改完成后重新 ```hexo generate``` 和 ```hexo deploy```
+目录 `source/_posts/` 下的文件对应每一篇博客，根据自己需要进行修改，修改完成后重新 `hexo generate` 和 `hexo deploy`
 
-### 6. 修改主题
+### 7. 修改主题
 博客页面不想用默认风格，可以换一个风格  
 官方主题页面：[https://hexo.io/themes/](https://hexo.io/themes/)  
 在该页面找一个喜欢的主题，此处以NexT为例
 
-* 回到 hexo 目录，输入命令```git clone https://github.com/theme-next/hexo-theme-next.git themes/next```，下载主题
+* 回到 hexo 目录，输入命令 `git clone https://github.com/theme-next/hexo-theme-next.git themes/next`，下载主题
   ```
   $ git clone https://github.com/theme-next/hexo-theme-next.git themes/next
   正克隆到 'themes/next'...
@@ -482,7 +482,7 @@ deploy:
   ## Themes: https://hexo.io/themes/
   theme: next
   ```
-* 输入命令 ```hexo s``` 或者 ```hexo server```，启动本地服务器
+* 输入命令 `hexo s` 或者 `hexo server`，启动本地服务器
 * 打开浏览器，输入网址 [http://localhost:4000/](http://localhost:4000/)，可以看到界面风格已经变化
 ![themenext](https://raw.githubusercontent.com/b31jsc/img/master/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/GitHub%20Pages%20%2B%20Hexo%E5%AE%9E%E7%8E%B0%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A215-themenext.png)
 * 生成静态页面，上传GitHub，省略具体步骤
@@ -492,11 +492,11 @@ deploy:
 #### 注意：
 * **Hexo** 只上传了 **GitHub** 最终生成的网页，**GitHub** 上并没有保留源码，有源码丢失的风险，可以将源码也保留一份在 **GitHub** 上  
 在 **GitHub** 上新建一个仓库，在 Hexo 目录依次输入如下命令：  
-```hexo clean``` 清除多余文件  
-```git init```   
-```git add *``` 添加所有文件  
-```git add .gitignore``` 补充添加.gitignore文件  
-```git commit -m "first commit"```   
-```git remote add origin XXXXX```  XXXXX是注册仓库的地址  
-```git push -u origin master```
+`hexo clean` 清除多余文件  
+`git init`   
+`git add *` 添加所有文件  
+`git add .gitignore` 补充添加.gitignore文件  
+`git commit -m "first commit"`   
+`git remote add origin XXXXX`  XXXXX是注册仓库的地址  
+`git push -u origin master`
 
